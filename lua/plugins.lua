@@ -35,5 +35,17 @@ return require('packer').startup(function(use)
 
   require("mason").setup()
   require("mason-lspconfig").setup()
+  require("lspconfig")["lua_ls"].setup({
+    on_attach =  on_attach,
+    capabilities = capabilities,
+  })
+  require("lspconfig")["bashls"].setup({
+    on_attach =  on_attach,
+    capabilities = capabilities,
+  })
+  require("lspconfig")["pyright"].setup({
+    on_attach =  on_attach,
+    capabilities = capabilities,
+  })
 end)
 
