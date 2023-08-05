@@ -24,8 +24,8 @@
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'vsnip' }, -- For vsnip users.
+      { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
@@ -67,7 +67,7 @@
     on_attach = on_attach,
     capabilities = capabilities
   }
-  require('lspconfig')['gopls'].setup {
+  require('lspconfig')['lua_ls'].setup {
     on_attach = on_attach,
     capabilities = capabilities
   }

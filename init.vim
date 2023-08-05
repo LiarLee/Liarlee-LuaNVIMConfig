@@ -1,5 +1,4 @@
-" 自动换行 
-set wrap
+" 自动换行 set wrap
 
 " 提示命令
 set showcmd
@@ -88,7 +87,6 @@ lua << END
 -- Include the lua/plugins.lua file content.
 require('plugins')
 require('keymaps')
-require('conf.nvim-cmp')
 
 END
 

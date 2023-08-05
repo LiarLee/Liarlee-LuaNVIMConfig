@@ -36,7 +36,6 @@ return require('packer').startup(function(use)
   require("mason").setup()
   require("mason-lspconfig").setup()
 
-  use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -46,6 +45,7 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
 
+  require('conf.nvim-cmp')
 
 end)
 
