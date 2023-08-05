@@ -42,10 +42,11 @@ set hlsearch
 "filetype indent on 
 filetype on
 
-" set clipboard=unnamed
+" setting use system clipboard
 set clipboard+=unnamedplus
 
 set signcolumn=yes
+set ttyfast
 
 set encoding=utf8
 set fileencodings=utf8,gbk,gb2312,gb18030
@@ -86,11 +87,5 @@ set background=dark
 lua << END
 -- Include the lua/plugins.lua file content.
 require('plugins')
--- Load Treesitter config.
-require('conf.nvim-treesitter')
--- Enable LuaLine Plugin.
-require('lualine').setup { options = { theme = 'catppuccin' } }
--- Enable Telescope Plugin.
-require('conf.nvim-telescope')
 END
 

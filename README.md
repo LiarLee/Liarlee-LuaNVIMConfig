@@ -18,8 +18,14 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```bash
 nvim 
 
+# In neovim. 
 :PackerSync 
+
 # due to network problem, maybe need to exec it twice.
 
 ```
 All Done.
+
+## Refer: 
+https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
+https://github.com/williamboman/mason-lspconfig.nvim#installation
