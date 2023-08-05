@@ -87,5 +87,7 @@ set background=dark
 lua << END
 -- Include the lua/plugins.lua file content.
 require('plugins')
+require('keymaps')
+
 END
 

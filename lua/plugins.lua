@@ -26,25 +26,19 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { {'nvim-lua/plenary.nvim'} },
-    config = function()
-      require('conf.nvim-mason')
-    end
   }
 
   -- mason config.
   use {
     'williamboman/mason.nvim',
-    config = function()
-      require('conf.nvim-mason')
-    end,
+    require("mason").setup(),
 
     "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require('conf.nvim-mason-lsp')
-    end,
+    require("mason-lspconfig").setup(),
 
     "neovim/nvim-lspconfig",
   }
 
 
 end)
+
