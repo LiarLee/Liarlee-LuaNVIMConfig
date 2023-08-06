@@ -44,8 +44,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
 
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
 
   use({
 	"L3MON4D3/LuaSnip",
@@ -53,8 +51,8 @@ return require('packer').startup(function(use)
 	tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 	-- install jsregexp (optional!:).
 	run = "make install_jsregexp"
-
   })
+  use 'saadparwaiz1/cmp_luasnip'
 
   require('conf.nvim-luasnip')
 end)
