@@ -31,7 +31,11 @@ return require('packer').startup(function(use)
 
   -- mason config.
   use { 'williamboman/mason.nvim' }
-  use { "williamboman/mason-lspconfig.nvim" }
+  use { "williamboman/mason-lspconfig.nvim" ,
+    config = function()
+      require('conf.nvim-mason-lspconfig')
+    end
+  }
   use { "neovim/nvim-lspconfig" }
   use "rafamadriz/friendly-snippets"
 
