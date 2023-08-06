@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use 'andrewstuart/vim-kubernetes'
   -- Post-install/update hook with neovim command
   use { 
     'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
@@ -32,6 +33,7 @@ return require('packer').startup(function(use)
   use { 'williamboman/mason.nvim' }
   use { "williamboman/mason-lspconfig.nvim" }
   use { "neovim/nvim-lspconfig" }
+  use "rafamadriz/friendly-snippets"
 
   require("mason").setup()
   require("mason-lspconfig").setup()
@@ -45,7 +47,16 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
 
-  require('conf.nvim-cmp')
+  use({
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+	tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!:).
+	run = "make install_jsregexp"
 
+  })
+
+  require('conf.nvim-luasnip')
 end)
+
 
