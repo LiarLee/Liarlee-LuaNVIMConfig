@@ -27,8 +27,11 @@ or
 ```
 All Done.
 
-## Refer: 
+## some refer: 
 https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 https://github.com/williamboman/mason-lspconfig.nvim#installation
+https://www.reddit.com/r/neovim/comments/ze9gbe/kubernetes_auto_completion_support_in_neovim/
+https://github.com/rafamadriz/friendly-snippets/tree/main
+
 
 
