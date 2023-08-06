@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
 
   use 'andrewstuart/vim-kubernetes'
   -- Post-install/update hook with neovim command
-  use { 
+  use {
     'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
     -- Use config file.
     config = function()
