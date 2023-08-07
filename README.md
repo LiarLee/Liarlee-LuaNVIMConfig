@@ -1,16 +1,16 @@
 ## NEOVIM customzation
 
-Configuring.....
-Some Funciton already can be used. 
+Configuring.....  
+Some Funciton already can be used.   
 
 
-## Config Record
+## Config Record  
 
-https://liarlee.site/2023/08/04/VIM_Neovim-Lua-from-scratch/
+https://liarlee.site/2023/08/04/VIM_Neovim-Lua-from-scratch/  
 
-### Plugin List
+### Plugin List  
 
-- use { 'wbthomason/packer.nvim' }
+- use { 'wbthomason/packer.nvim' }  
 - use { 'andrewstuart/vim-kubernetes' }
 - use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', }
 - use { 'catppuccin/nvim', as = 'catppuccin' }
@@ -29,26 +29,26 @@ https://liarlee.site/2023/08/04/VIM_Neovim-Lua-from-scratch/
 - use { 'saadparwaiz1/cmp_luasnip' }
 
 ## Installation
-1. Need to manual install packer.nvim
-https://github.com/wbthomason/packer.nvim
+1. Need to manual install packer.nvim   
+https://github.com/wbthomason/packer.nvim   
 
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
+   ```bash
+   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+   ```
 
 1. Starting neovim ...
-```bash
-nvim 
-
-# In neovim.
-:PackerSync
-or
-<Leader-ss> 
-
-# due to network problem, maybe need to exec it twice.
-```
-This command will syncing all plugin into your machine.
+   ```bash
+   nvim 
+   
+   # In neovim.
+   :PackerSync
+   or
+   <Leader-ss> 
+   
+   # due to network problem, maybe need to exec it twice.
+   ```
+   This command will syncing all plugin into your machine.
 
 1. All Done.
 
