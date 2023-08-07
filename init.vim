@@ -6,18 +6,17 @@ set showcmd
 " 显示菜单
 set wildmenu
 
-" 显示行号  
-set nu
 
 " 显示光标所在的行
 set cursorline
 set cursorcolumn
 
-" 显示关联的行号
+" 显示行号  
+set nu
 set relativenumber
 
 " 显示语法高亮
-syntax on
+syntax off
 
 " 锁定前后的5行
 set scrolloff=5
@@ -36,6 +35,8 @@ set expandtab
 
 " Setting the hlsearch
 set hlsearch
+set ignorecase
+set smartcase
 
 "set nocompatible
 "filetype indent on 
