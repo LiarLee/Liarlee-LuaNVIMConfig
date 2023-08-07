@@ -18,6 +18,9 @@ vim.keymap.set('n', '<leader>e', vim.cmd.KubeDelete)
 vim.keymap.set('n', '<leader>dr', vim.cmd.KubeDirApply)
 vim.keymap.set('n', '<leader>de', vim.cmd.KubeDirDelete)
 
+vim.keymap.set('n', '<leader>ld', builtin.lsp_definitions)
+vim.keymap.set('n', '<leader>lt', builtin.treesitter)
+
 
 
 
