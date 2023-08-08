@@ -3,6 +3,8 @@
 Configuring.....  
 Some Funciton already can be used.   
 
+Adding the nvim-tree and nvim-outline, but not finished.
+
 
 ## Config Record  
 

@@ -1,5 +1,4 @@
 require("luasnip.loaders.from_vscode").lazy_load()
-
   -- Set up nvim-cmp.
   local cmp = require'cmp'
   local has_words_before = function()

@@ -48,7 +48,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
 
-
   use({
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.
@@ -58,6 +57,14 @@ return require('packer').startup(function(use)
   })
   use 'saadparwaiz1/cmp_luasnip'
 
+  -- VIM-symbols-outline
+  use 'simrat39/symbols-outline.nvim'
+  require("symbols-outline").setup()
+
+  -- VIM-tree
+  use 'nvim-tree/nvim-tree.lua'
+  require("nvim-tree").setup()
+  
   require('conf.nvim-luasnip')
 end)
 
