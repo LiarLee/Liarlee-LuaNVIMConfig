@@ -9,6 +9,15 @@ end
 
 
 local luasnip = require("luasnip")
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
 
   cmp.setup({
     snippet = {
@@ -22,7 +31,7 @@ local luasnip = require("luasnip")
       end,
     },
     window = {
-      -- completion = cmp.config.window.bordered(),
+      completion = cmp.config.window.bordered(),
       -- documentation = cmp.config.window.bordered(),
     },
 
@@ -87,15 +96,6 @@ local luasnip = require("luasnip")
     }
   })
 
-  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-      { name = 'path' }
-    }, {
-      { name = 'cmdline' }
-    })
-  })
 
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
