@@ -7,7 +7,6 @@ require("luasnip.loaders.from_vscode").lazy_load()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-
 local luasnip = require("luasnip")
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
   cmp.setup.cmdline(':', {
@@ -23,11 +22,7 @@ local luasnip = require("luasnip")
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
-        --  vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
         require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-
-        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
       end,
     },
     window = {
@@ -62,28 +57,25 @@ local luasnip = require("luasnip")
         elseif luasnip.jumpable(-1) then
           luasnip.jump(-1)
         else
-
           fallback()
         end
       end, { "i", "s" }),
       }),
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        -- { name = 'vsnip' }, -- For vsnip users.
         { name = 'luasnip' }, -- For luasnip users.
-        -- { name = 'ultisnips' }, -- For ultisnips users.
-        -- { name = 'snippy' }, -- For snippy users.
       }, {
         { name = 'buffer' },
+        { name = 'path' },
       })
   })
 
   -- Set configuration for specific filetype.
   cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
-      { name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
+      { name = 'git' } -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
     }, {
-      { name = 'buffer' },
+      { name = 'buffer' }
 
     })
   })
@@ -92,10 +84,13 @@ local luasnip = require("luasnip")
   cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    }, {
       { name = 'buffer' }
     }
   })
-
 
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()

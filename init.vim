@@ -1,11 +1,13 @@
-" 自动换行 set wrap
+" 自动换行 
+set wrap
 
 " 提示命令
 set showcmd
 
+set modifiable
+
 " 显示菜单
 set wildmenu
-
 
 " 显示光标所在的行
 set cursorline
@@ -78,7 +80,6 @@ vnoremap <LEADER>x :norm 2x <CR>
 imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
 " -1 for jumping backwards.
 inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
-
 snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
 snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 
@@ -104,4 +105,6 @@ require('plugins')
 require('keymaps')
 
 END
+
+
 
