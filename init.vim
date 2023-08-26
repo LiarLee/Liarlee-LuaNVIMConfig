@@ -26,6 +26,9 @@ set scrolloff=5
 " 我的placeholder
 map <LEADER><LEADER> <Esc>/<--><CR>:nohlsearch<CR>c4l
 
+set nowrap
+
+
 " 关于空行的设置
 set noeol
 set autoread
