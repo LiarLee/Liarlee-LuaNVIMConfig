@@ -98,6 +98,9 @@ local luasnip = require("luasnip")
   require('lspconfig')['bashls'].setup {
     capabilities = capabilities
   }
+  require('lspconfig')['gopls'].setup {
+    capabilities = capabilities
+  }
   require('lspconfig')['yamlls'].setup {
     capabilities = capabilities
   }
