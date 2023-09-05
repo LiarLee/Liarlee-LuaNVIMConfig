@@ -5,7 +5,6 @@ Some Funciton already can be used.
 
 Adding the nvim-tree and nvim-outline, but not finished.
 
-
 ## Config Record  
 
 https://liarlee.site/2023/08/04/VIM_Neovim-Lua-from-scratch/  
