@@ -60,3 +60,9 @@ https://github.com/wbthomason/packer.nvim
 - https://github.com/rafamadriz/friendly-snippets/tree/main
 
 
+### Update Step
+1. Leader-ss -- to update all packer plugin.
+2. TSupdate -- to update treesitter.
+3. Leader-ms -- U  to update meson and LSP server.
+
+
